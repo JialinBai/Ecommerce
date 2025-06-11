@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Navbar from '../../components/navbar';
 import Footer from '../../components/footer';
+import ProfileSide from "@/components/ProfileSide"
 
 export default function UserProfilePage() {
     const [form, setForm] = useState({
@@ -22,12 +23,20 @@ export default function UserProfilePage() {
     <>
     <Navbar/>
     <div className="min-h-screen bg-gray-100 p-6">
-      <div className="max-w-4xl mx-auto bg-white p-8 rounded shadow">
+        <div className="max-w-7xl mx-auto flex gap-8">
+
+        {/* Side bar */}
+        <div className='w-64'>
+            <ProfileSide/>
+        </div>
+
+        {/* Main Content */}
+        <div className="flex-1 bg-white p-8 rounded shadow">
         <h1 className="text-xl text-black font-semibold mb-6">Profile</h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label className="block text-sm text-black font-medium mb-1">UserName</label>
+            <label className="block text-sm text-black font-medium mb-1">Username</label>
             <input
               name="username"
               value={form.username}
@@ -57,7 +66,7 @@ export default function UserProfilePage() {
           </div>
 
           <div>
-            <label className="block text-sm text-black font-medium mb-1">Phone-Number</label>
+            <label className="block text-sm text-black font-medium mb-1">Phon Number</label>
             <input
               name="phone"
               value={form.phone}
@@ -82,7 +91,7 @@ export default function UserProfilePage() {
           </div>
 
           <div>
-            <label className="block text-black text-sm font-medium mb-1">Birthday</label>
+            <label className="block text-black text-sm font-medium mb-1">Date of birth</label>
             <input
               type="date"
               name="dob"
@@ -97,6 +106,7 @@ export default function UserProfilePage() {
           Confirm
         </button>
       </div>
+    </div>
     </div>
         <Footer/>
     </>
