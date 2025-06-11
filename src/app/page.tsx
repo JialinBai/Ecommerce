@@ -17,12 +17,11 @@ const products = [
 ];
 
 const categories = [
-  { name: 'อิเล็กทรอนิกส์', icon: <FaBolt size={24} /> },
-  { name: 'ซูเปอร์มาร์เก็ต', icon: <FaShoppingCart size={24} /> },
-  { name: 'โค้ดรับเงินคืน', icon: <FaMoneyBillWave size={24} /> },
-  { name: 'ส่งฟรีขั้นต่ำ', icon: <FaShippingFast size={24} /> },
-  { name: 'สินค้าแบรนด์ดัง', icon: <FaTags size={24} /> },
-  { name: 'ส่งฟรีทั่วไทย', icon: <BsTruck size={24} /> },
+  { name: 'Electronic', icon: <FaBolt size={24} /> },
+  { name: 'Supermarket', icon: <FaShoppingCart size={24} /> },
+  { name: 'Code', icon: <FaMoneyBillWave size={24} /> },
+  { name: 'Brand', icon: <FaTags size={24} /> },
+  { name: 'Free Shipping', icon: <BsTruck size={24} /> },
 ];
 
 export default function Home() {

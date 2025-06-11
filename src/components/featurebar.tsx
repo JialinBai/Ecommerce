@@ -2,18 +2,18 @@
 import React from 'react';
 
 const categories = [
-  'ทั้งหมด',
-  'อุปกรณ์อิเล็กทรอนิกส์',
-  'เครื่องใช้ไฟฟ้า',
-  'สินค้าแฟชั่น',
-  'ของเล่น & เกม',
-  'ของใช้ในบ้าน',
-  'สุขภาพ & ความงาม',
+  'All',
+  'Electronic Devices',
+  'Electronic',
+  'Fashion',
+  'Toys & Games',
+  'Furniture',
+  'Health % Beauty',
 ];
 
 export default function FeatureSidebar() {
   return (
-    <nav className="text-sm font-medium space-y-2">
+    <nav className="text-sm text-black font-medium space-y-2">
       {categories.map((category, index) => (
         <div
           key={index}

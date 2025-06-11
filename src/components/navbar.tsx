@@ -1,6 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { FaShoppingCart, FaUser } from 'react-icons/fa';
+import LoginPage from '@/app/login-page/page';
 
 export default function Navbar() {
   return (
@@ -42,7 +43,7 @@ export default function Navbar() {
             <FaShoppingCart />
             <span>Cart</span>
           </Link>
-          <Link href="/login" className="flex items-center space-x-1">
+          <Link href="/login-page" className="flex items-center space-x-1">
             <FaUser />
             <span>Login</span>
           </Link>
