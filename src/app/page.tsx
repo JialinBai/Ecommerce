@@ -1,7 +1,5 @@
 import React from 'react';
-import Navbar from '../components/navbar';
 import FeatureSidebar from '../components/featurebar';
-import Footer from '../components/footer';
 import {
   FaBolt,
   FaShoppingCart,
@@ -27,7 +25,6 @@ const categories = [
 export default function Home() {
   return (
     <>
-      <Navbar />
 
       {/* Background Video */}
       <div className="relative min-h-screen overflow-hidden">
@@ -84,7 +81,6 @@ export default function Home() {
               </div>
             </section>
           </div>
-          <Footer/>   
         </main>
       </div>
     </div>

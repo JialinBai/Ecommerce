@@ -1,8 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import Navbar from '../../components/navbar';
-import Footer from '../../components/footer';
 import ProfileSide from "@/components/ProfileSide"
 
 export default function UserProfilePage() {
@@ -21,7 +19,6 @@ export default function UserProfilePage() {
 
   return (
     <>
-    <Navbar/>
     <div className="min-h-screen bg-gray-100 p-6">
         <div className="max-w-7xl mx-auto flex gap-8">
 
@@ -31,7 +28,7 @@ export default function UserProfilePage() {
         </div>
 
         {/* Main Content */}
-        <div className="flex-1 bg-white p-8 rounded shadow">
+        <div className="flex-1 bg-white p-8 rounded shadow-sm">
         <h1 className="text-xl text-black font-semibold mb-6">Profile</h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -108,7 +105,6 @@ export default function UserProfilePage() {
       </div>
     </div>
     </div>
-        <Footer/>
     </>
   )
 }

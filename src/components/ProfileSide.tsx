@@ -12,7 +12,7 @@ export default function ProfileSide() {
   }, [])
 
   return (
-    <div className="w-64 h-full border-r bg-white p-4 space-y-3 text-sm">
+    <div className="w-64 h-full bg-white p-4 space-y-3 text-sm">
       <p className="font-bold text-black text-lg">jialinbai641</p>
 
       <button
