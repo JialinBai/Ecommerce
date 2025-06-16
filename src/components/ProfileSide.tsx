@@ -27,7 +27,7 @@ export default function ProfileSide() {
       {mounted && isOpen && (
         <div className="ml-5 space-y-1">
           <Link href="/userprofile" className="block text-black">Profile</Link>
-          <Link href="#" className="block text-black">Banks & Cards</Link>
+          <Link href="/userpaymentinfo" className="block text-black">Banks & Cards</Link>
           <Link href="#" className="block text-black">Addresses</Link>
           <Link href="#" className="block text-black">Change Password</Link>
           <Link href="#" className="block text-black">Privacy Settings</Link>
@@ -36,7 +36,7 @@ export default function ProfileSide() {
       )}
 
       <div className="space-y-2">
-        <Link href="#" className="flex items-center text-blue-600 gap-2">
+        <Link href="/userpurchase" className="flex items-center text-blue-600 gap-2">
           <FaClipboardList /> My Purchase
         </Link>
         <Link href="#" className="flex items-center text-blue-600 gap-2">
@@ -44,9 +44,6 @@ export default function ProfileSide() {
         </Link>
         <Link href="#" className="flex items-center text-blue-600 gap-2">
           <FaTicketAlt /> My Vouchers
-        </Link>
-        <Link href="#" className="flex items-center text-blue-600 gap-2">
-          <FaWallet /> My Shopee Coins
         </Link>
       </div>
     </div>
