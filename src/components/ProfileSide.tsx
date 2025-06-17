@@ -1,5 +1,5 @@
 'use client'
-import { FaUser, FaLock, FaBell, FaClipboardList, FaTicketAlt, FaWallet } from 'react-icons/fa'
+import { FaUser, FaBell, FaClipboardList, FaTicketAlt } from 'react-icons/fa'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 

@@ -41,7 +41,7 @@ export default function MyPurchasePage() {
 
         {/* Main Content Card */}
         <div className="flex-1 bg-white rounded shadow px-8 py-6">
-          <h1 className="text-2xl font-semibold mb-6">My Purchases</h1>
+          <h1 className="text-2xl text-black font-semibold mb-6">My Purchases</h1>
 
           {loading ? (
             <p className="text-gray-500">Loading purchases...</p>
