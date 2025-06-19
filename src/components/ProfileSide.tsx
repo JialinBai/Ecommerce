@@ -28,8 +28,8 @@ export default function ProfileSide() {
         <div className="ml-5 space-y-1">
           <Link href="/userprofile" className="block text-black">Profile</Link>
           <Link href="/userpaymentinfo" className="block text-black">Banks & Cards</Link>
-          <Link href="#" className="block text-black">Addresses</Link>
-          <Link href="#" className="block text-black">Change Password</Link>
+          <Link href="/useraddress" className="block text-black">Addresses</Link>
+          <Link href="/userpasswordsetting" className="block text-black">Change Password</Link>
           <Link href="#" className="block text-black">Privacy Settings</Link>
           <Link href="#" className="block text-black">Notification Settings</Link>
         </div>

@@ -3,14 +3,14 @@
 import { useState } from 'react'
 import ProfileLayout from "@/components/profilelayout"
 
-export default function UserProfilePage() {
+export default function UserAddressPage() {
   const [form, setForm] = useState({
-    username: '',
-    name: '',
-    email: '',
-    phone: '',
-    gender: '',
-    dob: '',
+    Address: '',
+    Detail: '',
+    City: '',
+    Country: '',
+    Province: '',
+    Postcode: '',
   })
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -18,69 +18,64 @@ export default function UserProfilePage() {
   }
 
   return (
-    <ProfileLayout title="Profile">
+    <ProfileLayout title="Address">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <label className="block text-sm text-black font-medium mb-1">Username</label>
+          <label className="block text-sm text-black font-medium mb-1">Address</label>
           <input
-            name="username"
-            value={form.username}
-            disabled
-            className="w-full border text-black px-3 py-2 rounded bg-gray-100 text-gray-500"
-          />
-        </div>
-
-        <div>
-          <label className="block text-sm text-black font-medium mb-1">Name</label>
-          <input
-            name="name"
-            value={form.name}
+            name="Address"
+            value={form.Address}
             onChange={handleChange}
             className="w-full border text-black px-3 py-2 rounded"
           />
         </div>
 
         <div>
-          <label className="block text-sm text-black font-medium mb-1">Email</label>
+          <label className="block text-sm text-black font-medium mb-1">Detail</label>
           <input
-            name="email"
-            value={form.email}
+            name="Detail"
+            value={form.Detail}
             onChange={handleChange}
             className="w-full border text-black px-3 py-2 rounded"
           />
         </div>
 
         <div>
-          <label className="block text-sm text-black font-medium mb-1">Phone Number</label>
+          <label className="block text-sm text-black font-medium mb-1">City</label>
           <input
-            name="phone"
-            value={form.phone}
+            name="City"
+            value={form.City}
             onChange={handleChange}
             className="w-full border text-black px-3 py-2 rounded"
           />
         </div>
 
         <div>
-          <label className="block text-black text-sm font-medium mb-1">Gender</label>
-          <select
-            name="gender"
-            value={form.gender}
+          <label className="block text-sm text-black font-medium mb-1">Country</label>
+          <input
+            name="Country"
+            value={form.Country}
+            onChange={handleChange}
+            className="w-full border text-black px-3 py-2 rounded"
+          />
+        </div>
+
+        <div>
+          <label className="block text-black text-sm font-medium mb-1">Province</label>
+          <input
+            name="Province"
+            value={form.Province}
             onChange={handleChange}
             className="w-full border text-black px-3 py-2 rounded"
           >
-            <option value="">Select</option>
-            <option value="male">Man</option>
-            <option value="female">Women</option>
-            <option value="other">Others</option>
-          </select>
+          </input>
         </div>
 
         <div>
-          <label className="block text-black text-sm font-medium mb-1">Date of birth</label>
+          <label className="block text-black text-sm font-medium mb-1">Post Code</label>
           <input
-            type="date"
-            name="dob"
-            value={form.dob}
+            name="Postcode"
+            value={form.Postcode}
             onChange={handleChange}
             className="w-full text-black border px-3 py-2 rounded"
           />

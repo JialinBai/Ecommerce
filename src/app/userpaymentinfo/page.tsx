@@ -1,12 +1,11 @@
 'use client'
 
 import { useState } from 'react'
-import ProfileSide from "@/components/ProfileSide"
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
-import { format } from 'date-fns'
+import ProfileLayout from "@/components/profilelayout"
 
-export default function UserProfilePage() {
+export default function UserPaymentPage() {
     const [form, setForm] = useState({
     cardnumber: '',
     name: '',
@@ -20,18 +19,9 @@ export default function UserProfilePage() {
 
 return (
     <>
-    <div className="min-h-screen bg-gray-100 p-6">
-        <div className="max-w-7xl mx-auto flex gap-8">
-
-        {/* Side bar */}
-        <div className='w-64'>
-            <ProfileSide/>
-        </div>
-
+        <ProfileLayout title="Payment">
         {/* Main Content */}
         <div className="flex-1 bg-white p-8 rounded shadow-sm">
-        <h1 className="text-xl text-black font-semibold mb-6">Payment</h1>
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <label className="block text-sm text-black font-medium mb-1">Card Number</label>
@@ -94,8 +84,8 @@ return (
             Confirm
         </button>
       </div>
-    </div>
-    </div>
+    </ProfileLayout>
     </>
+    
   )
 }

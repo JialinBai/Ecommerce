@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
-import ProfileSide from "@/components/ProfileSide"
+import ProfileLayout from "@/components/profilelayout"
 
 type Purchase = {
   id: string
@@ -20,7 +20,7 @@ export default function MyPurchasePage() {
       try {
         setLoading(true)
         await new Promise((res) => setTimeout(res, 1000))
-        setPurchases([]) // ready to hook to real DB
+        setPurchases([])
       } catch (err) {
         console.error('Failed to fetch purchases:', err)
       } finally {
@@ -32,17 +32,8 @@ export default function MyPurchasePage() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-gray-100 p-6">
-      <div className="max-w-7xl mx-auto flex gap-8">
-        {/* Sidebar */}
-        <div className="w-64">
-          <ProfileSide />
-        </div>
 
-        {/* Main Content Card */}
-        <div className="flex-1 bg-white rounded shadow px-8 py-6">
-          <h1 className="text-2xl text-black font-semibold mb-6">My Purchases</h1>
-
+        <ProfileLayout title="Purchase History">
           {loading ? (
             <p className="text-gray-500">Loading purchases...</p>
           ) : purchases.length === 0 ? (
@@ -71,8 +62,7 @@ export default function MyPurchasePage() {
               ))}
             </div>
           )}
-        </div>
-      </div>
-    </div>
+
+        </ProfileLayout>
   )
 }
